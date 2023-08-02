@@ -1,5 +1,4 @@
 import { type Component } from 'solid-js'
-import styles from './App.module.css'
 import { createMachine, invoke, reduce, state, transition } from 'robot3'
 import {useMachine} from "../src";
 
@@ -16,7 +15,7 @@ const App: Component = () => {
   const [current, send] = useMachine( machine, {users: []})
 
   return (
-    <div class={styles.App}>
+    <div>
       <div>
       {current()?.name}
       </div>
